@@ -1,0 +1,2 @@
+risk_quantile,calibrated_threshold,pre_test_cutoff,confidence_threshold,protection_proxy_limit_m
+0.95,753.5116169808938,2022-12-13 17:59:30,0.7,10.0

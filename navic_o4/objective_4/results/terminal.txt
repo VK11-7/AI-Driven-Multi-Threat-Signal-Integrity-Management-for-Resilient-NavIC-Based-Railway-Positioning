@@ -1,0 +1,68 @@
+========================================================================
+OBJECTIVE 4 - DEPLOYMENT READINESS EVALUATION
+========================================================================
+Loading saved O1/O2 outputs. No model training will be performed.
+
+O4 POLICY COMPARISON
+                          Policy  Positioning availability proxy (%)  Protection proxy compliance (%)  Threat exclusions  Multipath downweights  Evaluated satellite-epochs
+     Reactive threshold baseline                               0.072                            0.036               2764                      0                        2766
+Proactive O1+O2 integrity policy                              98.988                           49.855                  0                      0                        2766
+
+ILLUSTRATIVE CORRIDOR THROUGHPUT SCENARIO
+                          Policy  Positioning availability proxy (%)  Assumed baseline trains/hour  Illustrative effective trains/hour  Throughput retention (%)
+     Reactive threshold baseline                               0.072                          12.0                               0.009                     0.072
+Proactive O1+O2 integrity policy                              98.988                          12.0                              11.879                    98.988
+
+HELD-OUT SYNTHETIC ATTACK DETECTION
+   Threat  Synthetic attack samples  Correctly classified attack samples  Sample-level detection recall (%)                                                   Interpretation
+Multipath                    297362                               295846                             99.490 Held-out synthetic injection only; not field-validated detection
+ Spoofing                    297291                               293702                             98.793 Held-out synthetic injection only; not field-validated detection
+
+SEASONAL ROBUSTNESS PROXY
+No condition column was available in the source dataset.
+
+Saved outputs to:
+D:\My Files\A7-A\Kaushik\M.Tech-AI-CB.SC.P2AIE25030\CB.SC.P2AIE25030-Project\Code\Proto-7\navic_o4\objective_4\results
+
+IMPORTANT INTERPRETATION
+- Availability is a >=4-satellite visibility proxy, not a computed PVT solution.
+- Protection proxy compliance is based on code-minus-carrier consistency, not HPL/VPL.
+- Throughput is an illustrative scaling scenario using the configured trains/hour assumption.
+- O2 threat predictions are evaluated on held-out synthetic scenarios; they are not field-validated attacks.
+
+
+
+
+========================================================================
+OBJECTIVE 4 - CORRECTED PROXY EVALUATION
+========================================================================
+
+Calibration: 95% quantile of pre-test sigma_phi_proxy
+Pre-test cutoff: 2022-12-13 17:59:30
+Calibration samples: 2,490,783
+Fixed risk threshold: 753.512
+
+CALIBRATED THRESHOLD
+95% pre-test quantile = 753.512
+
+POLICY COMPARISON
+                                    Policy  Usable satellite-observation rate (%)  4-satellite visibility proxy (%)  Signal-consistency proxy compliance among retained (%)  Retained signal rows  Excluded signal rows  Multipath downweighted rows  Eligible station-time epochs
+     Reactive current-observation baseline                                 84.309                               NaN                                                  58.491                  2332                   406                            0                             0
+Proactive O1 forecast + O2 spoofing policy                                 80.550                               NaN                                                  60.772                  2228                   510                            0                             0
+
+SEASONAL ROBUSTNESS
+No condition column.
+
+HELD-OUT SYNTHETIC ATTACK CLASSIFICATION
+   Threat  Held-out synthetic attack samples  Correct class predictions  Sample-level class recall (%)                                              Scope
+Multipath                             297362                     295846                         99.490 Synthetic held-out scenarios; not field validation
+ Spoofing                             297291                     293702                         98.793 Synthetic held-out scenarios; not field validation
+
+ILLUSTRATIVE CORRIDOR SCALING (NOT MEASURED THROUGHPUT)
+                                    Policy  4-satellite visibility proxy (%)  Assumed baseline trains/hour (illustrative)  Illustrative scaled trains/hour
+     Reactive current-observation baseline                               NaN                                         12.0                              NaN
+Proactive O1 forecast + O2 spoofing policy                               NaN                                         12.0                              NaN
+
+Saved outputs: D:\My Files\A7-A\Kaushik\M.Tech-AI-CB.SC.P2AIE25030\CB.SC.P2AIE25030-Project\Code\Proto-7\navic_o4\objective_4\results
+
+Interpretation: >=4-satellite visibility is only a visibility proxy, not a PVT fix. Signal-consistency compliance is not HPL/VPL. Synthetic attack recall is not field validation. Train/hour scaling is illustrative only.

@@ -1,0 +1,3 @@
+Policy,4-satellite visibility proxy (%),Assumed baseline trains/hour (illustrative),Illustrative scaled trains/hour
+Reactive current-observation baseline,,12.0,
+Proactive O1 forecast + O2 spoofing policy,,12.0,

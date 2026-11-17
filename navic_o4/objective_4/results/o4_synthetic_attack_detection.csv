@@ -1,0 +1,3 @@
+Threat,Held-out synthetic attack samples,Correct class predictions,Sample-level class recall (%),Scope
+Multipath,297362,295846,99.49018368184234,Synthetic held-out scenarios; not field validation
+Spoofing,297291,293702,98.79276533766578,Synthetic held-out scenarios; not field validation
